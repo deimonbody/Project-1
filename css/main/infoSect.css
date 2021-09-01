@@ -1,0 +1,73 @@
+.infoSect {
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+.infoWrapper {
+  width: 95%;
+  margin: 120px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.infoWrapper .info-desc {
+  text-align: center;
+  width: 55vw;
+  margin-bottom: 80px;
+  font-size: 18px;
+}
+.info {
+  display: grid;
+  grid-template-areas: "firstp photo fourthp" "secondp photo fifthp" "thirdp photo sixthp";
+}
+.info .first {
+  grid-area: firstp;
+}
+.info .second {
+  grid-area: secondp;
+}
+.info .third {
+  grid-area: thirdp;
+}
+.info .fourth {
+  grid-area: fourthp;
+}
+.info .fifth {
+  grid-area: fifthp;
+}
+.info .sixth {
+  grid-area: sixthp;
+}
+.info .shafa-photo {
+  grid-area: photo;
+}
+.info .shafa-photo img {
+  width: 480px;
+  height: auto;
+}
+.info .info-post {
+  display: grid;
+  grid-template-areas: "logo name" "logo prep";
+  grid-template-columns: 50px 290px;
+  column-gap: 22px;
+  grid-template-rows: auto auto;
+}
+.info .info-post:not(:last-child) {
+  margin-bottom: 25px;
+}
+.info .info-post .photo {
+  text-align: center;
+  grid-area: logo;
+}
+.info .info-post .photo img {
+  width: 50px;
+  height: auto;
+  margin-top: 5px;
+}
+.info .info-post h2 {
+  font-size: 18px;
+}
+.info .info-post p {
+  font-size: 15px;
+  margin-top: 10px;
+  line-height: 27px;
+}

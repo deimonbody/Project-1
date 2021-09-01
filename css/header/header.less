@@ -1,0 +1,133 @@
+@bg-color:rgba(63, 81, 160, 0.3);
+
+@green:rgb(80, 155, 70);
+@font-face {
+    // название шрифта(чтобы не запутаться лучше указать название папки со шрифтом) 
+    font-family: "Sophisto"; 
+    // адрес шрифта и тип 
+    src: url("/fonts/Sophisto\ OT\ W01\ DGauge.ttf") format("truetype"); 
+    font-style: normal; 
+    font-weight: normal; 
+    } 
+
+    h1{
+        font-size:27px;
+        margin-right:10px;
+        font-family: "Sophisto";
+    }   
+.allTop{
+    position: relative;
+}
+.backHead{
+    background-image: url("/img/kvartira-lyuks-penthaus-687.jpg");
+    background-repeat: repeat;
+    background-size: cover;
+    filter:brightness(40%);
+    position:absolute;
+    width:100%;
+    box-sizing: border-box;
+    height:100%;
+    z-index: -1;
+}
+
+.header{
+    position:fixed;
+    width:100%;
+    z-index:10000;
+    display: flex;
+    background-color: @bg-color;
+    color:white;
+    height:60px;
+    align-items: center;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+
+.logo{
+    flex-grow:1;
+    flex-shrink: 0;
+    margin-left:40px;
+    display: flex;
+    margin-right:40px;
+    align-items: center;
+    
+    p{
+        color:rgba(202, 202, 202, 0.5);
+        font-style:italic;
+        display: flex;
+        align-items: center;
+        margin:0;
+        margin-top:5px;
+    }
+    p::before{
+        content: "";
+        height:16px;
+        display: inline-block;
+        width:1px;
+        margin-right:10px;
+        background-color: rgba(202, 202, 202, 0.5);
+    }
+}
+
+.line-hover {width:100% !important; }
+
+.navigation{
+    margin-right:30px;
+    flex-basis: 410px;
+    flex-shrink: 0;
+    .list{
+        display: flex;
+        div{
+            height:60px;
+            margin-right:15px;
+            position: relative;
+            a{
+                margin-top:20px;
+                text-decoration: none;
+                display: block;
+                
+            }
+            .line{
+                display: block;
+                height:2px;
+                background-color: @green;
+                position: absolute;
+                left:0;
+                top:0;
+                width:0%;
+                transition-duration:0.5s;
+                transition-timing-function: ease-in-out;
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width:890px){
+    .header{
+       height:167px;
+       flex-direction: column;
+       padding-top:1px;
+       padding-bottom:1px;
+       position: static;
+   }
+   .logo{
+       margin-top:15px;
+        flex-direction: column;
+        p{margin-top:4px;}
+        p::before{display: none;}
+   }
+   .navigation{margin-right:0}
+   .list{
+       margin-bottom:15px;
+       margin-top:27px;
+       div{
+           height: auto !important;
+            &:not(:last-child){margin-right:30px;}
+            &:last-child{margin-right:0}
+        }
+       a{margin-top:0 !important}
+   }
+   .line{top:30px !important}
+}
+

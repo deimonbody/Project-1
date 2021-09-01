@@ -1,0 +1,77 @@
+.facts {
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+.facts-wrap {
+  margin-top: 140px;
+  background-image: url("/img/bg-facts.jpeg");
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  padding-top: 1px;
+}
+.facts-bg {
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1e613caf;
+  color: white;
+}
+.facts-bg .top h2 {
+  color: white;
+}
+.facts-bg .top .img-block::before,
+.facts-bg .top .img-block::after {
+  background-color: white;
+}
+.icons {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 50px 0 50px 0;
+  justify-content: space-between;
+  width: 60%;
+}
+.icons .icon-box {
+  flex-basis: 120px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.icons .icon-box:not(:last-child) {
+  margin-bottom: 40px;
+}
+.icons .icon-box i {
+  padding: 30px;
+  font-size: 35px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+.icons .icon-box p {
+  margin: 0;
+  font-size: 15px;
+  text-align: center;
+}
+.icons .icon-box h2 {
+  margin-top: 30px;
+  font-size: 45px;
+}
+.fact-link {
+  display: block;
+  text-align: center;
+  width: 100%;
+  font-size: 20px;
+  background-color: rgba(6, 19, 12, 0.68627451);
+  padding: 20px 0 20px 0;
+  font-weight: 700;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.5s;
+}
+.fact-link:hover {
+  background-color: rgba(18, 58, 36, 0.68627451);
+}
+@media screen and (max-width: 824px) and (min-width: 625px) {
+  .icon-box:last-child {
+    margin: 0 auto;
+  }
+}

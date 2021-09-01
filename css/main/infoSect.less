@@ -1,0 +1,66 @@
+.infoSect{
+    padding-top:1px;
+    padding-bottom:1px;
+}
+
+
+.infoWrapper{
+    width:95%;
+    margin:120px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .info-desc{
+        text-align: center;
+        width:55vw;
+        margin-bottom:80px;
+        font-size:18px;
+    }
+}
+.info{
+    display: grid;
+    grid-template-areas: "firstp photo fourthp"
+                        "secondp photo fifthp"
+                        "thirdp photo sixthp";
+    
+    .first{grid-area:firstp};
+    .second{grid-area:secondp};
+    .third{grid-area:thirdp};
+    .fourth{grid-area:fourthp};
+    .fifth{grid-area:fifthp};
+    .sixth{grid-area:sixthp}
+    .shafa-photo{
+        grid-area:photo; 
+        img{
+            width:480px;
+            height:auto;
+        }
+    }
+
+    .info-post{
+        &:not(:last-child){margin-bottom:25px}
+        display: grid;
+        grid-template-areas: "logo name"
+                             "logo prep";
+        grid-template-columns: 50px 290px;
+        column-gap: 22px;
+        grid-template-rows: auto auto;
+        .photo{
+            text-align: center;
+            grid-area:logo;
+            img{
+                width:50px;
+                height:auto;
+                margin-top:5px;
+            }
+        } 
+        h2{
+            font-size:18px;
+        }
+        p{
+            font-size:15px;
+            margin-top:10px;
+            line-height:27px;
+        }
+    }
+}
